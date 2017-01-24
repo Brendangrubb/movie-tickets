@@ -14,57 +14,66 @@
     </header>
     <div class="container">
 
-      <div class="row">
-        <div class="col-md-4">
-          <form id="movies" class="select-a-movie">
-            <label for="movie">Select a Movie:</label>
-            <select id="movie-selection" name="movie">
-              <option name="movie">A Man Called Ove</option>
-              <option name="movie">Rogue One</option>
-              <option name="movie">Dr Stange</option>
-              <option name="movie">Arrival</option>
-              <option name="movie">Blade Runner</option>
-            </select>
-          </form>
-        </div>
+      <form class="all-user-input">
 
-        <div class="col-md-8 available-times">
-          <h3>Available Times</h3>
-          <p>time</p> <p>time</p> <p>time</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-4">
-          <form id="tickets" class="number-of-tickets">
-            <label for="ticekt-total">Number of Tickets:</label>
-            <select id="ticket-total" name="ticket-total">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </form>
-        </div>
-        <div class="col-md-4">
-          <div class="radio">
-            <label for=""><strong>Are you a senior citizen or a veteran?</strong></label><br>
-            <label for="senior-military">
-              <input type="radio" name="senior-military" value="yes">
-              Yessir
-            </label>
-          </div>
-          <div class="radio">
-            <label for="senior-military">
-            <input type="radio" name="senior-military" value="no">
-            Nope
-            </label>
+        <div class="row">
+          <div class="col-md-4">
+            <!-- <form id="movies" class="select-a-movie"> -->
+              <label for="movie">Select a Movie:</label>
+              <select id="movie-selection" name="movie">
+                <option value="none">Select a movie:</option>
+                <option value="ove">A Man Called Ove</option>
+                <option value="rogue">Rogue One</option>
+                <option value="strange">Dr Stange</option>
+                <option value="arrival">Arrival</option>
+                <option value="bladerunner">Blade Runner</option>
+              </select>
+            <!-- </form> -->
           </div>
 
+          <div class="col-md-8 available-times">
+            <h3>Available Times</h3>
+            <ul id="movie-times">
+              
+            </ul>
+          </div>
         </div>
-        <div class="col-md-4">
-          <p><strong>Total:<span id=total>$</span></strong></p>
+
+        <div class="row">
+          <div class="col-md-4">
+            <!-- <form id="tickets" class="number-of-tickets"> -->
+              <label for="ticekt-total">Number of Tickets:</label>
+              <select id="ticket-total" name="ticket-total">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            <!-- </form> -->
+          </div>
+          <div class="col-md-4">
+            <div class="radio">
+              <label for=""><strong>Are you a senior citizen or a veteran?</strong></label><br>
+              <label for="senior-military">
+                <input type="radio" name="senior-military" value="yes">
+                Yessir
+              </label>
+            </div>
+            <div class="radio">
+              <label for="senior-military">
+              <input type="radio" name="senior-military" value="no">
+              Nope
+              </label>
+            </div>
+          </div>
+        </div>
+          <button type="submit">Buy Tickets!</button>
+      </form>
+
+
+        <div class="col-md-12">
+          <p><strong>Total:<span id="total">$</span></strong></p>
         </div>
       </div>
 
