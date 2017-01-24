@@ -3,24 +3,27 @@
   <head>
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Nunito" rel="stylesheet">
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/scripts.js"></script>
     <title></title>
   </head>
   <body>
-    <h1>Get Your Movie Tickets!</h1>
+    <header>
+      <h1>Get Your Movie Tickets!</h1>
+    </header>
     <div class="container">
 
       <div class="row">
         <div class="col-md-4">
-          <form id="" class="select-a-movie">
+          <form id="movies" class="select-a-movie">
             <label for="movie">Select a Movie:</label>
-            <select id="movie" name="movie">
-              <option>A Man Called Ove</option>
-              <option>Rogue One</option>
-              <option>Dr Stange</option>
-              <option>Arrival</option>
-              <option>Blade Runner</option>
+            <select id="movie-selection" name="movie">
+              <option name="movie">A Man Called Ove</option>
+              <option name="movie">Rogue One</option>
+              <option name="movie">Dr Stange</option>
+              <option name="movie">Arrival</option>
+              <option name="movie">Blade Runner</option>
             </select>
           </form>
         </div>
@@ -32,20 +35,36 @@
       </div>
 
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
+          <form id="tickets" class="number-of-tickets">
+            <label for="ticekt-total">Number of Tickets:</label>
+            <select id="ticket-total" name="ticket-total">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </form>
+        </div>
+        <div class="col-md-4">
+          <div class="radio">
+            <label for=""><strong>Are you a senior citizen or a veteran?</strong></label><br>
+            <label for="senior-military">
+              <input type="radio" name="senior-military" value="yes">
+              Yessir
+            </label>
+          </div>
+          <div class="radio">
+            <label for="senior-military">
+            <input type="radio" name="senior-military" value="no">
+            Nope
+            </label>
+          </div>
 
         </div>
-        <div class="col-md-6">
-
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-
-        </div>
-        <div class="col-md-6">
-
+        <div class="col-md-4">
+          <p><strong>Total:<span id=total>$</span></strong></p>
         </div>
       </div>
 

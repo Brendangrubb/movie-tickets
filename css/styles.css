@@ -1,22 +1,19 @@
 body {
-  background-color: #D4A190;
+  background-color: #350109;
+  font-family: 'Nunito', sans-serif;
 }
 
 h1 {
   margin-top: 0%;
-  min-height: 120px;
-  background-color: #90C3D4;
   text-align: center;
-  font-size: 50px;
-  font-style: oblique;
-}
-
-.container {
-  background-color: #A1D490;
-}
-
-.select-a-movie {
-  background-color: #A1D490;
+  padding-top: 50px;
+  font-size: 100px;
+  background-image: url(../img/theater.jpg);
+  background-size: cover;
+  height: 400px;
+  font-family: 'Merriweather', serif;
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 2px solid black;
 }
 
 #movie {
@@ -26,4 +23,20 @@ h1 {
 
 .available-times {
   text-align: center;
+}
+
+#total {
+  display: none;
+}
+
+label {
+  font-size: 1.3em;
+}
+
+.container {
+  background-color: #86C1E4;
+  border-radius: 10px;
+  padding: 10px;
+  height: 600px;
+  margin-top: 50px;
 }
