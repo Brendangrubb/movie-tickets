@@ -25,6 +25,10 @@ h1 {
   text-align: center;
 }
 
+#movie-times {
+  list-style: none;
+}
+
 #total {
   display: none;
 }
@@ -39,4 +43,9 @@ label {
   padding: 10px;
   height: 600px;
   margin-top: 50px;
+}
+
+li {
+  display: inline;
+  padding: 15px;
 }
