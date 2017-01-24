@@ -1,44 +1,44 @@
-//BACK-END
+//*****BACK-END*****
 
-var movieSelector = function() {
-
-};
-
-function Movie(name, rating, run, time) {
+function Movie(name, rating, run, times) { // Create Movie constructor
   this.movieName = name;
   this.rating = rating;
-  this.run = run;
-  this.time = [];
+  this.run = run; // Returns as true or false; 1st run is true, 2nd run is false
+  this.times = times;
 };
 
-var manCalledOve = new Movie("A Man Called Ove", "PG-13", "1st run", ["3:00pm", "5:00pm", "7:30pm"]);
-var rogueOne = new Movie("Rogue One: A Star Wars Story", "PG-13", "1st run", ["11:00am", "2:30pm", "4:30pm", "9:00pm"]);
-var moonlight = new Movie("Moonlight", "R", "1st run", ["5:00pm", "8:30pm"]);
-var arrival = new Movie("Arrival", "PG-13", "2nd run", ["11:30am", "3:30pm", "6:00pm"]);
-var bladeRunner = new Movie("Blade Runner", "R", "2nd run", ["8:00pm", "10:00pm"]);
 
+//*****Movie list*****
 
-// selectMovie.forEach(movie) {
-//
-// }
+var manCalledOve = new Movie("A Man Called Ove", "PG-13", true, ["3:00PM", "5:30PM", "8:00PM"]);
+var rogueOne = new Movie("Rogue One: A Star Wars Story", "PG-13", true, ["11:00AM", "2:30PM", "4:30PM", "9:00PM"]);
+var moonlight = new Movie("Moonlight", "R", true, ["5:00PM", "8:30PM", "11:00PM"]);
+var arrival = new Movie("Arrival", "PG-13", false, ["11:30AM", "2:00PM", "4:30PM", "7:15PM"]);
+var bladerunner = new Movie("Blade Runner", "R", false, ["5:00PM", "7:30PM", "10:00PM"]);
 
+//*****End Movie list*****
 
-//FRONT-END
+var movieSelection = function() { // Returns times of each movie
+  $("#movie-times").empty();
+
+  var movieValues = ["ove", "rogue", "moonlight", "arrival", "bladerunner"];
+  var nowShowing = [manCalledOve, rogueOne, moonlight, arrival, bladerunner];
+
+  for (var i = 0; i < movieValues.length; i++) { //Cycles through each movie to get showtimes
+    if ($("#movie-selection").val() === movieValues[i]) {
+      nowShowing[i].times.forEach(function(time) { // Cycles through each time and displays it individually in a list
+        $("#movie-times").append("<li>" + time + " " + "</li>");
+      });
+    };
+  };
+};
+
+//*****FRONT-END*****
 
 $(function() {
   $("#movie-selection").change(function() {
-    $("#movie-times").empty();
+    var movieInput = $("#movie-selection").val();
 
-    var movieList = ["ove", "rogue", "moonlight", "arrival", "bladerunner"];
-
-    for (var i = 0; i < movieList.length; i++) {
-      if ($(this).val() === movieList[i]) {
-        $("#movie-times").append("<li>3:30</li>" + "<li>6:00</li>" + "<li>9:00</li>");
-      };
-    };
-  });
-
-  $(".all-user-input").submit(function(event) {
-    event.preventDefault();
+    movieSelection();
   });
 });
