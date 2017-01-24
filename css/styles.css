@@ -1,0 +1,29 @@
+body {
+  background-color: #D4A190;
+}
+
+h1 {
+  margin-top: 0%;
+  min-height: 120px;
+  background-color: #90C3D4;
+  text-align: center;
+  font-size: 50px;
+  font-style: oblique;
+}
+
+.container {
+  background-color: #A1D490;
+}
+
+.select-a-movie {
+  background-color: #A1D490;
+}
+
+#movie {
+  width: 200px;
+  margin-left: 10px;
+}
+
+.available-times {
+  text-align: center;
+}
