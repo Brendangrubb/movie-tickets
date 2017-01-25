@@ -22,17 +22,17 @@
               <label for="movie">Select a Movie:</label>
               <select id="movie-selection" name="movie">
                 <option value="none">Select a movie:</option>
-                <option value="ove">A Man Called Ove</option>
-                <option value="rogue">Rogue One</option>
-                <option value="moonlight">Moonlight</option>
-                <option value="arrival">Arrival</option>
-                <option value="bladerunner">Blade Runner</option>
+                <option value="ove">A Man Called Ove - PG13</option>
+                <option value="rogue">Rogue One - PG13</option>
+                <option value="moonlight">Moonlight - R</option>
+                <option value="arrival">Arrival - PG13</option>
+                <option value="bladerunner">Blade Runner - R</option>
               </select>
             <!-- </form> -->
           </div>
 
           <div class="col-md-8 available-times">
-            <h3>Available Times</h3>
+            <h3>Select a time:</h3>
             <ul id="movie-times">
 
             </ul>
@@ -71,9 +71,16 @@
           <button type="submit">Buy Tickets!</button>
       </form>
 
-
-        <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6">
           <p><strong>Total:<span id="total">$</span></strong></p>
+        </div>
+        <div class="col-md-6">
+          <ul id="summary">
+            <li>Movie:</li>
+            <li>Time:</li>
+            <li>Tickets:</li>
+          </ul>
         </div>
       </div>
 

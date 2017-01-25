@@ -29,6 +29,11 @@ h1 {
   list-style: none;
 }
 
+#movie-times li:hover {
+  color: #990000;
+  cursor: pointer;
+}
+
 #total {
   display: none;
 }
@@ -48,5 +53,9 @@ label {
 li {
   display: inline;
   padding: 15px;
-  font-size: 2em;
+  font-size: 1.3em;
+}
+
+#summary {
+  display: ;
 }

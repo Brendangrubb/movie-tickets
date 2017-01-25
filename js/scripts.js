@@ -7,7 +7,6 @@ function Movie(name, rating, run, times) { // Create Movie constructor
   this.times = times;
 };
 
-
 //*****Movie list*****
 
 var manCalledOve = new Movie("A Man Called Ove", "PG-13", true, ["3:00PM", "5:30PM", "8:00PM"]);
@@ -21,13 +20,16 @@ var bladerunner = new Movie("Blade Runner", "R", false, ["5:00PM", "7:30PM", "10
 var movieSelection = function() { // Returns times of each movie
   $("#movie-times").empty();
 
+  var movieInput = $("#movie-selection").val();
   var movieValues = ["ove", "rogue", "moonlight", "arrival", "bladerunner"];
   var nowShowing = [manCalledOve, rogueOne, moonlight, arrival, bladerunner];
 
-  for (var i = 0; i < movieValues.length; i++) { //Cycles through each movie to get showtimes
+  for (var i = 0; i < movieValues.length; i++) { // Cycles through each movie to get showtimes
     if ($("#movie-selection").val() === movieValues[i]) {
+      var timeCount = 0;
       nowShowing[i].times.forEach(function(time) { // Cycles through each time and displays it individually in a list
-        $("#movie-times").append("<li>" + time + " " + "</li>");
+        timeCount += 1; // Sets unique ID to every LI element
+        $("#movie-times").append("<li id=\"" + timeCount + "\">" + time + "</li>");
       });
     };
   };
@@ -37,8 +39,6 @@ var movieSelection = function() { // Returns times of each movie
 
 $(function() {
   $("#movie-selection").change(function() {
-    var movieInput = $("#movie-selection").val();
-
     movieSelection();
   });
 });
